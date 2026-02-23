@@ -18,7 +18,7 @@ A plataforma permite:
 - HTML5
 - CSS3
 
-* Back-End:
+* Back-End (Ainda não implementado):
 - SpringBoot
 - PostgreSQL
 
