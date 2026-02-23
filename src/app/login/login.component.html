@@ -1,0 +1,63 @@
+<div class="container">
+
+  <!-- LADO ESQUERDO -->
+  <div class="left">
+    <div> <img src="/assets/svg/logo.svg"/></div>
+
+    <h4>login into your account</h4>
+
+    <div *ngIf="errorMessage" class="error-box">
+  
+        <div class="error-left">
+            ⚠
+            <span>{{ errorMessage }}</span>
+        </div>
+
+        <button class="close-btn" (click)="closeError()">X</button>
+
+        </div>
+
+    <form (ngSubmit)="login()">
+      <h5>Email</h5>
+      <input 
+        type="email" 
+        placeholder="example@email.com"
+        [(ngModel)]="email"
+        name="email"
+        required
+      >
+        <h5>Password</h5>
+      <input 
+        type="password"
+        placeholder="Enter your password"
+        [(ngModel)]="senha"
+        name="senha"
+        required
+      >
+      <h5>Forgot password?</h5>
+      <button type="submit" class="btn-primary">
+        Login Now
+      </button>
+
+    </form>
+
+    <div class="divider">
+      <span>OR</span>
+    </div>
+
+    <button class="btn-secondary">
+      Signup Now
+    </button>
+    
+
+  </div>
+
+
+  <!-- LADO DIREITO -->
+  <div class="right">
+    <h2>Your library, anywhere!</h2>
+
+    <img src="assets/svg/login-image.svg" alt="login image">
+  </div>
+
+</div>
